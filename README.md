@@ -6,6 +6,6 @@
 1. START
 2. B <-- GET FROM('https://coinmarketcap.com/es/currencies/bitcoin/')
 3. Q <-- GET
-4. R <-- D * B
+4. R <-- Q * B
 5. PRINT R
 6. END
