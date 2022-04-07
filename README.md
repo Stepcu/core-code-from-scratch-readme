@@ -24,3 +24,41 @@ date of birth: 1998
 * 1/2 = 0 R 1
 
 Decimal : 1998   Binary : 11111001110
+# program that adds any two given numbers provided by the user
+.data<br>
+	      number1: .asciiz "\nAdd a first number: "<br>
+	      number2: .asciiz "\nAdd a second number: "<br>
+  .text<br>
+	      main:<br>
+              li $v0, 4<br>
+              la $a0, number1<br>
+              syscall<br>
+
+              li $v0, 5<br>
+              syscall<br>
+
+              move $t0, $v0<br>
+
+              li $v0, 4<br>
+              la $a0, number2<br>
+              syscall<br>
+
+              li $v0, 5<br>
+              syscall<br>
+
+              move $t1, $v0<br>
+
+              li $v0, 1<br>
+              move $a0, $t0<br>
+              syscall<br>
+
+
+# Program that displays my name
+.data
+<br>
+         message: .asciiz "\nStefhany Castro\n"<br>
+  .text<br>
+        main:<br>
+              li $v0, 4<br>
+              la $a0, message<br>
+              syscall<br>
