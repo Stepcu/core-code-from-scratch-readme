@@ -25,6 +25,7 @@ date of birth: 1998
 
 Decimal : 1998   Binary : 11111001110
 # program that adds any two given numbers provided by the user
+``
 .data<br>
 	      number1: .asciiz "\nAdd a first number: "<br>
 	      number2: .asciiz "\nAdd a second number: "<br>
@@ -52,8 +53,9 @@ Decimal : 1998   Binary : 11111001110
               move $a0, $t0<br>
               syscall<br>
 
-
+``
 # Program that displays my name
+``
 .data
 <br>
          message: .asciiz "\nStefhany Castro\n"<br>
@@ -62,3 +64,32 @@ Decimal : 1998   Binary : 11111001110
               li $v0, 4<br>
               la $a0, message<br>
               syscall<br>
+	      ``
+# Print special numbers
+``
+for(let i=0; i<=100; i=i+2){
+console.log(i);
+}
+``
+# Bad code
+``
+var cond = false;
+if (cond == true) {
+  console.log('The cond variable is true');
+} else {
+  console.log('The cond variable is false');
+}``
+The code was using an assignment instead of a comparision expression.
+# Bad code 2
+``var n = 100;
+
+if (n == 100) {
+  console.log('This is a special number!');
+} else if (n < 1000 && n % 10 == 0) {
+  console.log('This number is almost special');
+} else {
+  console.log('Just a regular number');
+}
+``
+
+
