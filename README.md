@@ -34,26 +34,18 @@ Decimal : 1998   Binary : 11111001110
               li $v0, 4<br>
               la $a0, number1<br>
               syscall<br>
-
               li $v0, 5<br>
               syscall<br>
-
               move $t0, $v0<br>
-
               li $v0, 4<br>
               la $a0, number2<br>
               syscall<br>
-
               li $v0, 5<br>
               syscall<br>
-
               move $t1, $v0<br>
-
               li $v0, 1<br>
               move $a0, $t0<br>
-              syscall<br>
-
-``
+              syscall<br>``
 # Program that displays my name
 ``
 .data
@@ -82,14 +74,41 @@ if (cond == true) {
 The code was using an assignment instead of a comparision expression.
 # Bad code 2
 ``var n = 100;
-
 if (n == 100) {
   console.log('This is a special number!');
 } else if (n < 1000 && n % 10 == 0) {
   console.log('This number is almost special');
 } else {
   console.log('Just a regular number');
-}
-``
-
-
+}``
+# Multiply
+``function multiply(a, b){
+  return a * b
+}``
+# ASCII Total
+``function uniTotal(string) {
+  let total = 0;
+  for (i = 0; i < string.length; i++) {
+    total += string[i].charCodeAt();
+  }
+  return total;
+}``
+# Char From ASCII Value
+``function getChar(c){
+  return String.fromCharCode(c);
+}``
+# Binary Addition
+``function addBinary(a,b) {
+  return (a + b).toString(2);
+}``
+# Student's Final Grade
+``function finalGrade (exam, projects) {
+  if(exam > 90 || projects > 10){
+    return 100;
+  } else if(exam > 75 && projects >= 5){
+    return 90;
+  } else if(exam > 50 && projects >= 2){
+    return 75;
+  }
+    return 0;  
+}``
