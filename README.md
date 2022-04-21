@@ -112,3 +112,29 @@ if (n == 100) {
   }
     return 0;  
 }``
+# Holiday VIII - Duty Free
+``function dutyFree(normPrice, discount, hol){
+let discountAmount = normPrice * discount / 100;
+return Math.floor(hol / discountAmount);
+}``
+# Twice As Old
+``function twiceAsOld(dadYearsOld, sonYearsOld) {
+  let twice = sonYearsOld * 2;
+  return Math.abs(dadYearsOld - twice);
+}``
+# Valid Spacing
+``function validSpacing(s) {
+  return s.trim() == s && !s.includes("  ");
+}``
+# Fake Binary
+``function fakeBin(x){
+  let final = '';
+  for(let i = 0; i < x.length; i++){
+    if(parseInt(x[i]) < 5){
+      final = final + '0'; 
+    } else {
+      final = final + '1';
+    }
+  }
+  return final;
+}``
