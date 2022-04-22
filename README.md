@@ -138,3 +138,30 @@ return Math.floor(hol / discountAmount);
   }
   return final;
 }``
+# Remove All Exclamation Marks From The End Of Sentence
+``function remove (string) { 
+  return string.replace(/!+$/, '');
+}``
+# Vowel Remover
+``function shortcut (string) {
+  return string.replace(/[aeiou]/gi, '');
+}``
+# Rock Paper Scissors!
+``const rps = (p1, p2) => {
+  if((p1 == 'scissors' && p2 == 'paper') || (p1 == 'rock' && p2 == 'scissors') || (p1 == 'paper' && p2 == 'rock')){
+    return 'Player 1 won!'
+  } else if((p2 == 'scissors' && p1 == 'paper') || (p2 == 'rock' && p1 == 'scissors') || (p2 == 'paper' && p1 == 'rock')){
+    return 'Player 2 won!'
+  }
+  return 'Draw!'
+};``
+# Persistent Bugger
+``function persistence(num) {
+   var times = 0;
+    num = num.toString();
+    while (num.length > 1) {
+        times++;
+        num = num.split('').map(Number).reduce((a, b) => a * b).toString();
+    }
+    return times;
+}``
