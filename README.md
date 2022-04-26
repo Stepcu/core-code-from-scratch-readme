@@ -165,3 +165,11 @@ return Math.floor(hol / discountAmount);
     }
     return times;
 }``
+# Your order, please
+``function order(words) {
+  let wordsArray = words.split(' ');
+  wordsArray = wordsArray.sort(
+    (w1, w2) => Number(w1.replace(/\D/g, '')) - Number(w2.replace(/\D/g, ''))
+  );
+  return wordsArray.join(' ');
+}``
