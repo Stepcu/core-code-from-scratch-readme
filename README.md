@@ -181,4 +181,4 @@ return Math.floor(hol / discountAmount);
     .filter((char, i, arr) => {
       return arr.indexOf(char) !== i && arr.lastIndexOf(char) === i;
     }).length;
-}`
+}``
