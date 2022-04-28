@@ -173,3 +173,12 @@ return Math.floor(hol / discountAmount);
   );
   return wordsArray.join(' ');
 }``
+# Counting Duplicates
+``function duplicateCount(text) {
+  return text
+    .toLowerCase()
+    .split('')
+    .filter((char, i, arr) => {
+      return arr.indexOf(char) !== i && arr.lastIndexOf(char) === i;
+    }).length;
+}`
