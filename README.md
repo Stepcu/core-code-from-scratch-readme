@@ -182,3 +182,46 @@ return Math.floor(hol / discountAmount);
       return arr.indexOf(char) !== i && arr.lastIndexOf(char) === i;
     }).length;
 }``
+# Decode The Morse Code
+``decodeMorse = function(morseCode){
+  let decodeLetter = (letter) => {
+    return MORSE_CODE[letter];
+  }
+  let decodeWord = (word) =>{
+    return word.split(' ').map(decodeLetter).join('');
+  }
+  return morseCode.trim().split('  ').map(decodeWord).join(' ');
+}``
+# Valid Parentheses
+``function validParentheses(parens) {
+  let valid = 0;
+  for(let i = 0; i < parens.length; i++){
+    if(parens[i] === ')') valid--;
+    if(parens[i] === '(') valid++;
+    if (valid < 0) return false;
+    }
+    return valid == 0;
+  }``
+  # Convert String To Camel Case
+  ``function toCamelCase(str){
+  return str.replace(/-|_/g, ' ').split(' ').map((word, index) => {
+    if(index > 0){
+      return word[0].toUpperCase() + word.substr(1);
+    }
+    return word;
+  }).join('');
+}``
+# Unique In Order
+``var uniqueInOrder=function(iterable){
+  return [...iterable].filter((w, i) => w != iterable[i + 1]);
+}``
+# Fold An Array
+``function foldArray(a, n) {
+  const r = [],
+    c = a.slice();
+  while (c.length) r.push(c.pop() + (c.shift() || 0));
+  return n - 1 ? foldArray(r, n - 1) : r;
+}``
+# Encrypt This!
+``const encryptThis = (text) =>
+  text.split(' ').map((word) =>word.replace(/(^\w)(\w)(\w*)(\w$)/, `$1$4$3$2`).replace(/^\w/, word.charCodeAt(0))).join(' ');``
