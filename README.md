@@ -307,7 +307,7 @@ function validate(password) {
     );
 }
 ```
-#Week 5
+# Week 5
 ### Find the Missing Letter
 ```javascript
 function findMissingLetter(array) {
